@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Divine Comedy</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+       
+  
+    </header>
+    <section>
+        <img src="stars.png" id="stars"/>
+        <img src="moon.png" id="moon"/>
+        <img src="mountains_behind.png" id="mountains_behind"/>
+        <h2 id="text">The Divine Comedy</h2>
+        <img src="mountains_front.png" id="mountains_front"/>
+
+    </section>
+    <div class="sec" id="sec">
+    <h2>Inferno, The First Book</h2>
+    <p> Midway upon the journey of our life 
+        I found myself within a forest dark,<br><br> 
+        For the straightforward pathway had been lost.
+        
+        Ah me! how hard a thing it is to say<br><br> 
+        What was this forest savage, rough, and stern, 
+        Which in the very thought renews the fear. <br><br>
+        
+        So bitter is it, death is little more; 
+        But of the good to treat, which there I found, 
+        Speak will I of the other things I saw there.<br><br>
+        
+        I cannot well repeat how there I entered, 
+        So full was I of slumber at the moment 
+        In which I had abandoned the true way.<br><br>
+        
+        But after I had reached a mountain's foot, 
+        At that point where the valley terminated, 
+        Which had with consternation pierced my heart,<br><br>
+        
+        Upward I looked, and I beheld its shoulders, 
+        Vested already with that planet's rays 
+        Which leadeth others right by every road.<br><br>
+        
+        Then was the fear a little quieted 
+        That in my heart's lake had endured throughout 
+        The night, which I had passed so piteously.<br><br>
+        
+        And even as he, who, with distressful breath, 
+        Forth issued from the sea upon the shore, 
+        Turns to the water perilous and gazes;<br><br> 
+        
+        So did my soul, that still was fleeing onward, 
+        Turn itself back to re-behold the pass 
+        Which never yet a living person left.</p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0.5 + 'px';
+            header.style.top = value * 0.05 + 'px';
+
+        })
+   </script>
+</body>
+</html>
